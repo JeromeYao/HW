@@ -77,3 +77,16 @@ uname, *fields, homedir, sh = line.split(':')
 
 print('uname:%s\nhomedir:%s\nsh:%s\n' % (uname, homedir, sh))
 
+record = ('ACME', 50, 123.45, (12, 18, 2012))
+name, *_, (*_, year) = record
+print('name:%s\nyear:%s' % (name, year))
+print('\n')
+
+# 递归算法星号解压的运用
+items = [1, 10, 7, 4, 5, 9]
+
+
+def sum1(items):
+    head, *tail = items
+    return head + sum1(tail) if tail else head
+print(sum1(items))
