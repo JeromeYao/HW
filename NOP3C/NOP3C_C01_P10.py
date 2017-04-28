@@ -3,7 +3,7 @@
 
 '''
 It's a note of 10th paragraph of 1st chapter of python3-cookbook chinese version
-https://github.com/JeromeYao/python3-cookbook/blob/master/source/c01/p09_find_commonalities_in_dicts.rst
+https://github.com/JeromeYao/python3-cookbook/blob/master/source/c01/p10_remove_duplicates_from_seq_order.rst
 '''
 
 __author__ = 'JeromeYao'
