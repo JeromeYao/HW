@@ -27,6 +27,35 @@ from collections import Counter
 word_counts = Counter(words)
 # 出现频率最高的3个单词
 top_three = word_counts.most_common(3)
-print(top_three)
+print(top_three, type(top_three))
 # Outputs [('eyes', 8), ('the', 5), ('look', 4)]
 
+# 作为输入， Counter(注意首字母大写）对象可以接受任意的由hashable元素构成的序列对象。
+# 底层实现上，一个Counter对象就是一个字典，将元素映射到出现次数上。
+print(word_counts['not'])
+print(word_counts['eyes'])
+
+# 手动计数，可用加法：
+morewords = ['why', 'are', 'you', 'not', 'looking', 'in', 'my', 'eyes']
+for word in morewords:
+    word_counts[word] += 1
+
+print(word_counts['eyes'])
+
+# 或者update()方法：
+word_counts.update(morewords)
+
+a = Counter(words)
+b = Counter(morewords)
+print(a)
+print(b)
+
+# combine counts
+
+c = a + b
+print(c)
+
+d = a - b
+print(d)
+
+# Counter 对象在制表或计数方面应该优先使用，而不是手动利用字典实现。
