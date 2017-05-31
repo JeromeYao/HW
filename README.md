@@ -23,7 +23,6 @@
 > [Numpy](https://github.com/JeromeYao/PyNotes/tree/master/Py4DataAnalysis/NumPy)
 > is a notebook of the 4th chapter of < Python for Data Analysis >.  
 > [Pandas](https://github.com/JeromeYao/PyNotes/tree/master/Py4DataAnalysis/Pandas) is the 5th chapter.
-<<<<<<< HEAD
-## [Tips](https://github.com/JeromeYao/PyNotes/tree/master/Py4DataAnalysis)
-=======
->>>>>>> 0a563c9f7c8bda59917453900759704408818e5d
+
+## [Tips](https://github.com/JeromeYao/PyNotes/tree/master/Py4DataAnalysis)  
+
