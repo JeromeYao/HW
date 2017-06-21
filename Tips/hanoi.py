@@ -4,7 +4,7 @@
 """
 For test
 """
-
+__author__ = "jerome Yao"
 x = int(input('输入有几个盘子'))
 
 

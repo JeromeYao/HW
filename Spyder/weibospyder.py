@@ -14,6 +14,7 @@ from lxml import etree
 
 # reload(sys)
 # sys.setdefaultencoding('utf-8')
+
 if len(sys.argv) >= 2:
     user_id = int(sys.argv[1])
 else:
@@ -24,7 +25,7 @@ url = 'http://weibo.cn/u/%d?filter=1&page=1' % user_id
 
 html = requests.get(url, cookies=cookie).content
 selector = etree.HTML(html)
-pageNum = (int)(selector.xpath('//input[@name="mp"]')[0].attrib['value'])
+pageNum = int(selector.xpath('//input[@name="mp"]')[0].attrib['value'])
 
 result = ""
 urllist_set = set()
@@ -88,5 +89,5 @@ else:
             print(u"该图片下载失败:%s" % imgurl)
         x += 1
 
-print(u'原创微博爬取完毕，共%d条，保存路径%s' % (word_count - 4, word_path))
-print(u'微博图片爬取完毕，共%d张，保存路径%s' % (image_count - 1, image_path))
+print('原创微博爬取完毕，共%d条，保存路径%s' % (word_count - 4, word_path))
+print('微博图片爬取完毕，共%d张，保存路径%s' % (image_count - 1, image_path))
